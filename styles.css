@@ -1,0 +1,171 @@
+/* Reset default browser styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #222; /* Dark background */
+    color: #ddd; /* Light text color */
+    scroll-padding-top: 60px; /* Account for the sticky header */
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: justify;
+}
+
+header {
+    background-color: #111; /* Dark header background */
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ddd; /* Light hover color */
+}
+
+main {
+    padding: 20px 0;
+}
+
+section {
+    margin-bottom: 30px;
+    background-color: #333; /* Dark section background */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+    scroll-margin-top: 154px; /* Ensure the section is scrolled into view */
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #fff; /* White headings */
+}
+
+h3 {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+    color: #ddd; /* Light headings */
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: #111; /* Dark footer background */
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 10px;
+}
+
+footer nav ul li {
+    margin: 0 10px;
+}
+
+.button {
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive styles */
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 900px) {
+    header .container {
+        flex-wrap: nowrap;
+    }
+
+    nav ul {
+        flex-wrap: nowrap;
+    }
+}
