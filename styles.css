@@ -73,7 +73,7 @@ section {
     margin-bottom: 30px;
     background-color: #333; /* Dark section background */
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Stronger shadow */
     scroll-margin-top: 154px; /* Ensure the section is scrolled into view */
 }
@@ -139,6 +139,46 @@ footer nav ul li {
 
 .button:hover {
     background-color: #0056b3;
+}
+
+/* Courses Section Styling */
+.courses-container {
+    display: flex; /* Use flexbox to create columns */
+    justify-content: center; /* Center the columns */
+    gap: 40px; /* Space between the columns */
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    margin-top: 20px; /* Add some spacing above the container */
+}
+
+.course-column {
+    flex: 1; /* Allow columns to grow and take up equal space */
+    min-width: 250px; /* Minimum width for columns */
+    max-width: 400px; /* Maximum width for columns */
+    margin-bottom: 20px; /* Add some spacing below the columns */
+    text-align: center; /* Center-align text */
+}
+
+.course-column h3 {
+    font-size: 1.6rem; /* Styling for course headings */
+    margin-bottom: 10px; /* Add some spacing below headings */
+}
+
+.course-column ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+}
+
+.course-column li {
+    margin-bottom: 8px; /* Add spacing between list items */
+    font-size: 1rem; /* Adjust font size */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .courses-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+        align-items: center; /* Center-align the columns */
+    }
 }
 
 /* Profile Picture Section Styling */
