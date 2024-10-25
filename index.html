@@ -27,14 +27,16 @@
     <main class="container">
 
         <section class="profile-picture-section">
-            <img src="profile.jpeg" alt="Profile Picture" class="profile-picture">
+            <img src="media/profile.jpeg" alt="Profile Picture" class="profile-picture">
         </section>
 
         <section id="links">
-            <a style='margin-top: 4px;' href="https://www.linkedin.com/in/aaron-matthew-lewis/" target="_blank"
+            <a href="https://www.linkedin.com/in/aaron-matthew-lewis/" target="_blank"
                 class="button">LinkedIn Profile</a>
             <a href="https://github.com/aaron-m-lewis" target="_blank" class="button">GitHub Profile</a>
-            <a style='margin-bottom: 4px;' href="https://1drv.ms/w/c/77223eeb5b2f6ada/EbNXNhOn6pJPmrqv-DTqjT8BDPpdwmNRjta641KsZTp6sg?e=Wie2f5" target="_blank" class="button">Resume</a>
+            <a style='margin-bottom: 0px;'
+                href="https://1drv.ms/w/c/77223eeb5b2f6ada/EbNXNhOn6pJPmrqv-DTqjT8BDPpdwmNRjta641KsZTp6sg?e=Wie2f5"
+                target="_blank" class="button">Resume</a>
         </section>
 
         <section id="about">
@@ -62,49 +64,73 @@
             </p>
         </section>
 
-        <section id="projects">
+        <section id="projects" style="padding-bottom: 10px;">
             <h2>Projects</h2>
-            <div class="project">
-                <h3>RISC-V Doubly Linked List</h3>
-                <a href="https://github.com/gmax9803/riscv-dllist" target="_blank" class="button">View on GitHub</a>
-                <p style="margin-bottom: 12px;">My partners and I coded a doubly linked list using RISC-V assembly.
-                    Mainly, this project taught us about the intricacies of working with limited amounts of registers,
-                    the call stack and how it impacts our code, as well as the organization required to perform doubly
-                    linked list operations.</p>
+            <div class="button-group">
+                <a href="projects/regex-parser.html" class="advanced-button" data-hover="Unleash Regex Power!">
+                    Regular Expression Parser
+                </a>
+                <a href="projects/web-crawler.html#web-crawler" class="advanced-button" data-hover="Download those PNGs!">
+                    Web Crawler
+                </a>
             </div>
-            <div class="project">
-                <h3>Regular Expression Parser</h3>
-                <a href="https://github.com/aaron-m-lewis/bgrep" target="_blank" class="button">View on GitHub</a>
-                <p style="margin-bottom: 12px;">Throughout the course of a semester, my partner and I built up our own
-                    regular expression parser from scratch in Python. As we learned about better models of computation,
-                    starting at deterministic finite automata and ending at Turing machines, we were able to add more
-                    features. I'm currently working out some kinks that came from transferring this code to my local
-                    machine, but the final product, bgrep, still works as intended.</p>
+
+            <div class="button-group">
+                <a href="projects/nmap-clone.html#nmap-clone" class="advanced-button" data-hover="Scan a Network!">
+                    Nmap Clone
+                </a>
+                <a href="projects/curl-clone.html#curl-clone" class="advanced-button" data-hover="Transfer that Data!">
+                    Curl Clone
+                </a>
             </div>
-            <div class="project">
-                <h3>Constellation Model</h3>
-                <p style="margin-bottom: 12px;">During my summer study abroad in London, we were tasked with creating a
-                    machine learning project. By utilizing TensorFlow in Python, my team was able to train a
-                    convolutional neural network that would process images of the night sky and attempt to identify
-                    certain constellations. Due to time constraints and resources, we were not able to make it as
-                    accurate as possible, reaching a 65% accuracy in a couple days of training various models. If I were
-                    to redo this
-                    project with similar time constraints, I would try to find a dataset with smaller images and work
-                    with a smaller model to reduce the number of weights and biases, all to decrease training time and
-                    allow for more fine-tuning.</p>
+
+            <div class="button-group">
+                <a href="projects/chat-program.html#chat-program" class="advanced-button" data-hover="Send a Chat!">
+                    Chat Program
+                </a>
+                <a href="projects/process-scheduler.html#process-scheduler" class="advanced-button" data-hover="Control those Processes!">
+                    Process Scheduler
+                </a>
             </div>
-            <div class="project">
-                <h3>Drug Seizures Analysis</h3>
-                <a href="https://aaron-m-lewis.github.io/borderProject/" target="_blank" class="button">View Website</a>
-                <p>To end my second semester of freshman year, we were tasked with doing a data analysis project in
-                    Python. My partner and I decided to use available data on drug seizures at the borders of the United
-                    States, looking at metrics ranging from drug volume confiscated to the number of aggressive
-                    encounters at the borders. Once we had processed the CSV and JSON files, we utilized the Plotly library in Python
-                    to make interesting visualizations of the data, integrating the graphs into a basic webpage.</p>
+
+            <div class="button-group">
+                <a href="projects/facial-recognition.html#facial-recognition" class="advanced-button" data-hover="It Can See You!">
+                    Facial Recognition Model
+                </a>
+                <a href="projects/gym-usage-tracker.html#gym-usage-tracker" class="advanced-button" data-hover="Count some Reps!">
+                    Gym Usage Tracker
+                </a>
+            </div>
+
+            <div class="button-group">
+                <a href="projects/constellation-model.html#constellation-model" class="advanced-button" data-hover="Look to the Stars!">
+                    Constellation Model
+                </a>
+                <a href="projects/drug-seizures.html#drug-seizures" class="advanced-button" data-hover="See the Data!">
+                    Drug Seizures Analysis
+                </a>
+            </div>
+
+            <div class="button-group">
+                <a href="projects/albacore-datapath.html#albacore-datapath" class="advanced-button" data-hover="Not a Fish!">
+                    Albacore Datapath
+                </a>
+                <a href="projects/riscv-dllist.html" class="advanced-button" data-hover="Explore Assembly Magic!">
+                    RISC-V Doubly Linked List
+                </a>
+            </div>
+
+            <div class="button-group" style="margin-bottom: 0px;">
+                <a href="projects/dslx-elevator-chip.html#dslx-elevator-chip" class="advanced-button" data-hover="Don't Spam the Buttons!">
+                    DSLX Elevator Chip
+                </a>
+                <a href="projects/water-valve.html#water-valve" class="advanced-button" data-hover="No Leaks!">
+                    Water Valve
+                </a>
             </div>
         </section>
 
-        <section id="courses" style="padding-bottom: 14px;">
+        <section id="courses" style="padding-bottom: 0px;">
             <h2>Courses</h2>
             <div class="courses-container">
                 <!-- Major Courses -->
@@ -142,8 +168,8 @@
 
         <section id="contact">
             <h2>Contact Me</h2>
-            <p>Email: me@aaronmlewis.com</p>
-            <p>Phone: (630) 557 9122</p>
+            <p><strong>Email:</strong> me@aaronmlewis.com</p>
+            <p><strong>Phone:</strong> (630) 557 9122</p>
         </section>
     </main>
 

@@ -75,7 +75,7 @@ section {
     padding: 20px;
     border-radius: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Stronger shadow */
-    scroll-margin-top: 154px; /* Ensure the section is scrolled into view */
+    scroll-margin-top: 164px; /* Ensure the section is scrolled into view */
 }
 
 h2 {
@@ -125,6 +125,7 @@ footer nav ul li {
 }
 
 .button {
+    position: relative;
     display: block;
     padding: 5px 10px;
     margin-bottom: 10px;
@@ -134,6 +135,7 @@ footer nav ul li {
     text-align: center;
     text-decoration: none;
     border-radius: 8px;
+    overflow: hidden;
     transition: background-color 0.3s ease;
 }
 
@@ -141,20 +143,91 @@ footer nav ul li {
     background-color: #0056b3;
 }
 
+/* Advanced button styling (inherits styles from the original button) */
+.advanced-button {
+    position: relative;
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    overflow: hidden; /* Prevent content overflow */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: background color change */
+.advanced-button:hover {
+    background-color: #0056b3;
+}
+
+/* Alternative hover text styling using ::after */
+.advanced-button::after {
+    content: attr(data-hover); /* Display hover text from data-hover attribute */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: #fff; /* Hover text always white */
+    white-space: nowrap; /* Prevent text wrapping */
+    pointer-events: none; /* Ensure it doesn’t block interactions */
+    transition: opacity 0.3s ease;
+}
+
+/* On hover: hide original text and show hover text */
+.advanced-button:hover {
+    color: transparent; /* Make original text invisible */
+}
+
+.advanced-button:hover::after {
+    opacity: 1; /* Make hover text visible */
+}
+
+/* Button Group Styling */
+.button-group {
+    display: flex; /* Arrange buttons in a row */
+    gap: 8px; /* Space between buttons */
+    justify-content: center; /* Center the buttons horizontally */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    /* margin-top: 10px; */
+}
+
+/* Ensure each button takes equal space */
+.button-group .advanced-button {
+    flex: 1; /* Make buttons grow to fill available space equally */
+    max-width: none; /* Optional: Limit button size on wide screens */
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+    .button-group {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 0px; /* Reduce space between stacked buttons */
+    }
+
+    .button-group .advanced-button {
+        max-width: none; /* Allow buttons to stretch to full width */
+    }
+}
+
 /* Courses Section Styling */
 .courses-container {
     display: flex; /* Use flexbox to create columns */
     justify-content: center; /* Center the columns */
-    gap: 40px; /* Space between the columns */
+    gap: 8px; /* Space between the columns */
     flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
     margin-top: 20px; /* Add some spacing above the container */
 }
 
 .course-column {
     flex: 1; /* Allow columns to grow and take up equal space */
-    min-width: 250px; /* Minimum width for columns */
+    min-width: 265px; /* Minimum width for columns */
     max-width: 400px; /* Maximum width for columns */
-    margin-bottom: 20px; /* Add some spacing below the columns */
+    margin-bottom: 12px; /* Add some spacing below the columns */
     text-align: center; /* Center-align text */
 }
 
@@ -233,3 +306,42 @@ footer nav ul li {
     }
 }
 
+/* Ensure consistent spacing across main and project pages */
+.profile-picture-section,
+.project-details {
+    margin-top: 10px; /* Adjust based on header height */
+}
+
+.video-container iframe {
+    width: 100%; /* Make the video responsive */
+    height: 225px; /* Maintain aspect ratio */
+    display: block; /* Ensure the iframe takes up full width */
+}
+
+/* Profile Picture and Video Section Styling */
+.video-container {
+    width: 100%;
+    margin: 0px auto; /* Center-align */
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive YouTube Video Wrapper */
+.video-wrapper {
+    position: relative;
+    width: 100%; /* Make sure the wrapper takes the full width of the container */
+    padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Always take up 100% of the width */
+    height: 100%; /* Match height based on aspect ratio */
+    border: 0;
+}
