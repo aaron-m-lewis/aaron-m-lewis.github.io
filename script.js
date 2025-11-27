@@ -44,21 +44,21 @@ const posts = [
   {
     title: 'Teaching Assistant',
     body: '',
-    link: 'teaching_assistant/',
+    link: '/teaching_assistant',
     tags: [],
     pinned: false
   },
   {
     title: 'Amazon SDE Intern',
     body: '',
-    link: 'amazon_sde_intern/',
+    link: '/amazon_sde_intern',
     tags: [],
     pinned: false
   },
   {
     title: 'Freelance Developer',
     body: '',
-    link: 'freelance_developer/',
+    link: '/freelance_developer',
     tags: [],
     pinned: false
   },
