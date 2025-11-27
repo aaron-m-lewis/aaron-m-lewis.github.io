@@ -189,11 +189,6 @@ body {
   .profile {
     grid-template-columns: 1fr;
   }
-
-  .avatar-wrap {
-    width: 96px;
-    height: 96px;
-  }
 }
 
 .page.detail-page {
