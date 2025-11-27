@@ -44,21 +44,21 @@ const posts = [
   {
     title: 'Teaching Assistant',
     body: '',
-    link: '',
+    link: 'teaching_assistant/',
     tags: [],
     pinned: false
   },
   {
     title: 'Amazon SDE Intern',
     body: '',
-    link: '',
+    link: 'amazon_sde_intern/',
     tags: [],
     pinned: false
   },
   {
     title: 'Freelance Developer',
     body: '',
-    link: '',
+    link: 'freelance_developer/',
     tags: [],
     pinned: false
   },
@@ -79,8 +79,12 @@ function render() {
 
       clone.querySelector('[data-title]').textContent = post.title;
       clone.querySelector('[data-body]').textContent = post.body;
-      clone.querySelector('[data-link]').href = post.link;
-      clone.querySelector('[data-link]').textContent = post.link.includes('http') ? 'Open' : 'Read more';
+      const linkEl = clone.querySelector('[data-link]');
+      const isExternal = /^https?:\/\//i.test(post.link);
+
+      linkEl.href = post.link;
+      linkEl.textContent = isExternal ? 'Open' : 'Read more';
+      linkEl.target = isExternal ? '_blank' : '_self';
 
       const tagWrap = clone.querySelector('[data-tags]');
       post.tags.forEach(tag => {
