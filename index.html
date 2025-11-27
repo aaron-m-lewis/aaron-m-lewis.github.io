@@ -1,183 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Lewis - Personal Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Lewis | Digital Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <h1>Aaron Lewis</h1>
-            <nav>
-                <ul>
-                    <li><a href="#links">Links</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
+  <div class="page">
+    <header class="profile">
+      <div class="avatar-wrap">
+        <img src="media/headshot.jpg" alt="Aaron Lewis headshot" class="avatar">
+      </div>
+      <div class="profile-details">
+        <h1>Aaron M. Lewis</h1>
+        <p class="handle">@aaronmlewis · Glen Ellyn, IL</p>
+        <p class="bio">bio</p>
+        <a class="button" href="mailto:aaron@aaronmlewis.com">Contact</a>
+      </div>
     </header>
 
-    <main class="container">
-
-        <section class="profile-picture-section">
-            <img src="media/profile.jpeg" alt="Profile Picture" class="profile-picture">
-        </section>
-
-        <section id="links">
-            <a href="https://www.linkedin.com/in/aaron-matthew-lewis/" target="_blank"
-                class="button">LinkedIn Profile</a>
-            <a href="https://github.com/aaron-m-lewis" target="_blank" class="button">GitHub Profile</a>
-            <a style='margin-bottom: 0px;'
-                href="https://1drv.ms/w/c/77223eeb5b2f6ada/EbNXNhOn6pJPmrqv-DTqjT8BDPpdwmNRjta641KsZTp6sg?e=Wie2f5"
-                target="_blank" class="button">Resume</a>
-        </section>
-
-        <section id="about">
-            <h2>About Me</h2>
-            <p style="margin-bottom: 12px;">My name's Aaron Lewis, and I'm a junior at the University of Notre
-                Dame majoring in computer
-                science and minoring in engineering corporate practice. I'm a very motivated individual who loves
-                learning new things and how they're relevant in my own life. With my degree, I hope to do
-                work that
-                makes a tangible difference in the world around me. If you'd like to reach out, please feel free to
-                contact me by email or phone! Scroll down to see some of the more significant work I've done, or keep
-                reading to learn a little more about
-                me.</p>
-            <p> I'm currently off at school working hard to stay on top of my classes while working as a teaching
-                assistant for an introductory coding class. It's an enjoyable experience thus far, and I thoroughly
-                enjoy teaching other students fundamental computer science concepts. Outside of class and work I have a
-                few hobbies that I divide my free time between. Mainly, I enjoy board games, (developing) video games,
-                working out, and playing sports! The first two are easily kept up with because of my participation in
-                the University's board game and video game clubs, but I also make sure to do something active each day.
-                As of right now, board game number one has to go to <i>Sheriff of Nottingham</i>, and video game number
-                one belongs to <i>Terraria</i>. I'd be hiding most of myself if I didn't mention how much I listen to
-                music. I'm into bands like <i>Pink Floyd</i>, <i>The
-                    Strokes</i>,
-                <i>Last Dinosaurs</i>, <i>Radiohead</i>, and <i>Peach Pit</i>. If you have any music suggestions, please reach out!
-            </p>
-        </section>
-
-        <section id="projects" style="padding-bottom: 10px;">
-            <h2>Projects</h2>
-            <div class="button-group">
-                <a href="projects/regex-parser.html" class="advanced-button" data-hover="Unleash Regex Power!">
-                    Regular Expression Parser
-                </a>
-                <a href="projects/web-crawler.html#web-crawler" class="advanced-button" data-hover="Download those PNGs!">
-                    Web Crawler
-                </a>
-            </div>
-
-            <div class="button-group">
-                <a href="projects/nmap-clone.html#nmap-clone" class="advanced-button" data-hover="Scan a Network!">
-                    Nmap Clone
-                </a>
-                <a href="projects/curl-clone.html#curl-clone" class="advanced-button" data-hover="Transfer that Data!">
-                    Curl Clone
-                </a>
-            </div>
-
-            <div class="button-group">
-                <a href="projects/chat-program.html#chat-program" class="advanced-button" data-hover="Send a Chat!">
-                    Chat Program
-                </a>
-                <a href="projects/process-scheduler.html#process-scheduler" class="advanced-button" data-hover="Control those Processes!">
-                    Process Scheduler
-                </a>
-            </div>
-
-            <div class="button-group">
-                <a href="projects/facial-recognition.html#facial-recognition" class="advanced-button" data-hover="It Can See You!">
-                    Facial Recognition Model
-                </a>
-                <a href="projects/gym-usage-tracker.html#gym-usage-tracker" class="advanced-button" data-hover="Count some Reps!">
-                    Gym Usage Tracker
-                </a>
-            </div>
-
-            <div class="button-group">
-                <a href="projects/constellation-model.html#constellation-model" class="advanced-button" data-hover="Look to the Stars!">
-                    Constellation Model
-                </a>
-                <a href="projects/drug-seizures.html#drug-seizures" class="advanced-button" data-hover="See the Data!">
-                    Drug Seizures Analysis
-                </a>
-            </div>
-
-            <div class="button-group">
-                <a href="projects/albacore-datapath.html#albacore-datapath" class="advanced-button" data-hover="Not a Fish!">
-                    Albacore Datapath
-                </a>
-                <a href="projects/riscv-dllist.html" class="advanced-button" data-hover="Explore Assembly Magic!">
-                    RISC-V Doubly Linked List
-                </a>
-            </div>
-
-            <div class="button-group" style="margin-bottom: 0px;">
-                <a href="projects/dslx-elevator-chip.html#dslx-elevator-chip" class="advanced-button" data-hover="Don't Spam the Buttons!">
-                    DSLX Elevator Chip
-                </a>
-                <a href="projects/water-valve.html#water-valve" class="advanced-button" data-hover="No Leaks!">
-                    Water Valve
-                </a>
-            </div>
-        </section>
-
-        <section id="courses" style="padding-bottom: 0px;">
-            <h2>Courses</h2>
-            <div class="courses-container">
-                <!-- Major Courses -->
-                <div class="course-column">
-                    <h3>Major Courses</h3>
-                    <ul>
-                        <li>Engineering Design</li>
-                        <li>Engineering Computing</li>
-                        <li>Fundamentals of Computing</li>
-                        <li>Machine Learning for Engineers</li>
-                        <li>Data Structures</li>
-                        <li>Discrete Math</li>
-                        <li>Logic Design and Sequential Circuits</li>
-                        <li>Computer Architecture</li>
-                        <li>Systems Programming</li>
-                        <li>Theory of Computing</li>
-                        <li>Introduction to Artificial Intelligence</li>
-                        <li>Operating System Principles</li>
-                        <li>Programming Paradigms</li>
-                        <li>Special Studies: Computer Vision</li>
-                    </ul>
-                </div>
-
-                <!-- Minor Courses -->
-                <div class="course-column">
-                    <h3>Minor Courses</h3>
-                    <ul>
-                        <li>Integrated Engineering and Business</li>
-                        <li>Advanced Engineering and Business</li>
-                        <li>Principles of Microeconomics</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p><strong>Email:</strong> me@aaronmlewis.com</p>
-            <p><strong>Phone:</strong> (630) 557 9122</p>
-        </section>
+    <main id="posts" class="feed">
+      <section class="grid" id="post-grid" aria-live="polite"></section>
     </main>
+  </div>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Aaron Lewis</p>
-        </div>
-    </footer>
+  <template id="post-template">
+    <article class="tile">
+      <div class="tile-meta">
+        <span class="pin" aria-label="Pinned post">Pinned</span>
+        <div class="tags" data-tags></div>
+      </div>
+      <h3 data-title></h3>
+      <p data-body></p>
+      <a class="tile-link" data-link target="_blank" rel="noreferrer noopener">Open</a>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
 </body>
-
 </html>
