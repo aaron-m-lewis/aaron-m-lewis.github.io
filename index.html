@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aaron Lewis | Digital Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="profile">
+      <div class="avatar-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Notre_Dame_Fighting_Irish_logo.svg/1200px-Notre_Dame_Fighting_Irish_logo.svg.png" alt="Aaron Lewis headshot" class="avatar">
+      </div>
+      <div class="profile-details">
+        <h1>Aaron M. Lewis</h1>
+        <p class="handle">@aaronmlewis · Glen Ellyn, IL</p>
+        <p class="bio">bio</p>
+        <a class="button" href="mailto:aaron@aaronmlewis.com">Contact</a>
+      </div>
+    </header>
+
+    <main id="posts" class="feed">
+      <section class="grid" id="post-grid" aria-live="polite"></section>
+    </main>
+  </div>
+
+  <template id="post-template">
+    <article class="tile">
+      <div class="tile-meta">
+        <span class="pin" aria-label="Pinned post">Pinned</span>
+        <div class="tags" data-tags></div>
+      </div>
+      <h3 data-title></h3>
+      <p data-body></p>
+      <a class="tile-link" data-link target="_blank" rel="noreferrer noopener">Open</a>
+    </article>
+  </template>
+
+  <script src="script.js"></script>
+</body>
+</html>
