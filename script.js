@@ -2,66 +2,66 @@ const posts = [
   {
     title: 'GitHub',
     body: '',
-    link: '',
+    link: 'https://github.com/aaron-m-lewis',
     tags: [],
     pinned: true
   },
   {
     title: 'LinkedIn',
     body: '',
-    link: '',
+    link: 'https://www.linkedin.com/in/aaron-matthew-lewis/',
     tags: [],
     pinned: true
   },
   {
     title: 'Resume',
     body: '',
-    link: '',
+    link: 'https://1drv.ms/w/c/77223eeb5b2f6ada/IQBsD1EWDhpkRY1Pla_vEWN7Aaea8X1lCaXv136m6M6xaVY?e=nJTvfs',
     tags: [],
     pinned: true
   },
   {
     title: 'Spotify',
     body: '',
-    link: '',
+    link: 'https://open.spotify.com/user/h3fzh9y35elo0qy1fp7w99ftf?si=4fe9c342e05c4314',
     tags: [],
-    pinned: false
+    pinned: true
   },
   {
-    title: 'Amazon Internship',
+    title: 'Steam',
+    body: '',
+    link: 'https://steamcommunity.com/profiles/76561199124729683/',
+    tags: [],
+    pinned: true
+  },
+  {
+    title: 'YouTube',
+    body: '',
+    link: 'https://www.youtube.com/@amlew',
+    tags: [],
+    pinned: true
+  },
+  {
+    title: 'Teaching Assistant',
     body: '',
     link: '',
     tags: [],
     pinned: false
   },
   {
-    title: 'Notre Dame Bengal Bouts',
+    title: 'Amazon SDE Intern',
     body: '',
     link: '',
     tags: [],
     pinned: false
   },
   {
-    title: 'Strength Training',
+    title: 'Freelance Developer',
     body: '',
     link: '',
     tags: [],
     pinned: false
   },
-  {
-    title: 'Notre Dame Men\'s Rowing',
-    body: '',
-    link: '',
-    tags: [],
-    pinned: false
-  },
-  {
-    title: 'Gaming',
-    body: '',
-    link: '',
-    tags: [],
-    pinned: false
-  }
 ];
 
 const template = document.getElementById('post-template');
