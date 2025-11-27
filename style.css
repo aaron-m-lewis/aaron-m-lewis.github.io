@@ -43,8 +43,8 @@ body {
 }
 
 .avatar-wrap {
-  width: 110px;
-  height: 110px;
+  width: 150px;
+  height: 150px;
   border-radius: 16px;
   overflow: hidden;
   border: 1px solid var(--line);
