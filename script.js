@@ -16,7 +16,9 @@ const posts = [
   {
     title: 'Resume',
     body: '',
-    link: 'https://1drv.ms/w/c/77223eeb5b2f6ada/IQBsD1EWDhpkRY1Pla_vEWN7Aaea8X1lCaXv136m6M6xaVY?e=nJTvfs',
+    link: 'media/resume_placeholder.pdf',
+    linkText: 'Open',
+    target: '_blank',
     tags: [],
     pinned: true
   },
@@ -83,8 +85,11 @@ function render() {
       const isExternal = /^https?:\/\//i.test(post.link);
 
       linkEl.href = post.link;
-      linkEl.textContent = isExternal ? 'Open' : 'Read more';
-      linkEl.target = isExternal ? '_blank' : '_self';
+      const linkText = post.linkText ?? (isExternal ? 'Open' : 'Read more');
+      const linkTarget = post.target ?? (isExternal ? '_blank' : '_self');
+
+      linkEl.textContent = linkText;
+      linkEl.target = linkTarget;
 
       const tagWrap = clone.querySelector('[data-tags]');
       post.tags.forEach(tag => {
