@@ -19,7 +19,10 @@
         <h1>Aaron M. Lewis</h1>
         <p class="handle">@aaronmlewis · Glen Ellyn, IL</p>
         <p class="bio">CS & MECP @ University of Notre Dame</p>
-        <a class="button" href="mailto:me@aaronmlewis.com">Contact</a>
+        <div class="profile-actions">
+          <a class="button" href="mailto:me@aaronmlewis.com">Contact</a>
+          <a class="button secondary" href="media/aaron_lewis_resume.pdf" target="_blank" rel="noreferrer noopener">Resume</a>
+        </div>
       </div>
     </header>
 
@@ -29,15 +32,13 @@
   </div>
 
   <template id="post-template">
-    <article class="tile">
+    <a class="tile" data-tile target="_blank" rel="noreferrer noopener">
       <div class="tile-meta">
-        <span class="pin" aria-label="Pinned post">Pinned</span>
         <div class="tags" data-tags></div>
       </div>
       <h3 data-title></h3>
       <p data-body></p>
-      <a class="tile-link" data-link target="_blank" rel="noreferrer noopener">Open</a>
-    </article>
+    </a>
   </template>
 
   <script src="script.js"></script>

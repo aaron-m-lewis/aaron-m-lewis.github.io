@@ -1,3 +1,51 @@
+const brandThemes = {
+  github: {
+    background: '#000000',
+    text: '#ffffff',
+    border: '#30363d',
+    linkBackground: '#ffffff',
+    linkText: '#000000',
+    tagBackground: '#161b22',
+    tagText: '#ffffff'
+  },
+  linkedin: {
+    background: '#0a66c2',
+    text: '#ffffff',
+    border: '#004182',
+    linkBackground: '#ffffff',
+    linkText: '#0a66c2',
+    tagBackground: '#084f96',
+    tagText: '#ffffff'
+  },
+  spotify: {
+    background: '#1db954',
+    text: '#191414',
+    border: '#169c46',
+    linkBackground: '#191414',
+    linkText: '#1db954',
+    tagBackground: '#191414',
+    tagText: '#1db954'
+  },
+  steam: {
+    background: '#171d25',
+    text: '#c5c3c0',
+    border: '#2a475e',
+    linkBackground: '#c5c3c0',
+    linkText: '#171d25',
+    tagBackground: '#2a475e',
+    tagText: '#c5c3c0'
+  },
+  youtube: {
+    background: '#ff0000',
+    text: '#ffffff',
+    border: '#d00000',
+    linkBackground: '#ffffff',
+    linkText: '#ff0000',
+    tagBackground: '#b30000',
+    tagText: '#ffffff'
+  },
+};
+
 const posts = [
   {
     title: 'GitHub',
@@ -6,7 +54,7 @@ const posts = [
     linkText: 'Open',
     target: '_blank',
     tags: [],
-    pinned: true
+    theme: 'github'
   },
   {
     title: 'LinkedIn',
@@ -15,16 +63,7 @@ const posts = [
     linkText: 'Open',
     target: '_blank',
     tags: [],
-    pinned: true
-  },
-  {
-    title: 'Resume',
-    body: '',
-    link: 'media/aaron_lewis_resume.pdf',
-    linkText: 'Open',
-    target: '_blank',
-    tags: [],
-    pinned: true
+    theme: 'linkedin'
   },
   {
     title: 'Spotify',
@@ -33,7 +72,7 @@ const posts = [
     linkText: 'Open',
     target: '_blank',
     tags: [],
-    pinned: true
+    theme: 'spotify'
   },
   {
     title: 'Steam',
@@ -42,7 +81,7 @@ const posts = [
     linkText: 'Open',
     target: '_blank',
     tags: [],
-    pinned: true
+    theme: 'steam'
   },
   {
     title: 'YouTube',
@@ -51,7 +90,7 @@ const posts = [
     linkText: 'Open',
     target: '_blank',
     tags: [],
-    pinned: true
+    theme: 'youtube'
   },
   {
     title: 'Teaching Assistant',
@@ -59,8 +98,7 @@ const posts = [
     link: '/teaching_assistant',
     linkText: 'Read more',
     target: '_self',
-    tags: [],
-    pinned: false
+    tags: []
   },
   {
     title: 'Amazon SDE Intern',
@@ -68,8 +106,7 @@ const posts = [
     link: '/amazon_sde_intern',
     linkText: 'Read more',
     target: '_self',
-    tags: [],
-    pinned: false
+    tags: []
   },
   {
     title: 'Freelance Developer',
@@ -77,49 +114,57 @@ const posts = [
     link: '/freelance_developer',
     linkText: 'Read more',
     target: '_self',
-    tags: [],
-    pinned: false
+    tags: []
   },
 ];
 
 const template = document.getElementById('post-template');
 const grid = document.getElementById('post-grid');
 
+function applyTheme(article, post) {
+  if (!post.theme) return;
+
+  const theme = brandThemes[post.theme];
+  if (!theme) return;
+
+  article.style.setProperty('--tile-bg', theme.background);
+  article.style.setProperty('--tile-text', theme.text);
+  article.style.setProperty('--tile-subtext', theme.subtext ?? theme.text);
+  article.style.setProperty('--tile-border', theme.border ?? theme.background);
+  article.style.setProperty('--tile-link-bg', theme.linkBackground ?? theme.text);
+  article.style.setProperty('--tile-link-text', theme.linkText ?? theme.background);
+  article.style.setProperty('--tag-bg', theme.tagBackground ?? theme.linkBackground ?? theme.text);
+  article.style.setProperty('--tag-text', theme.tagText ?? theme.linkText ?? theme.background);
+}
+
 function render() {
   grid.innerHTML = '';
 
-  posts
-    .slice()
-    .sort((a, b) => Number(b.pinned) - Number(a.pinned))
-    .forEach(post => {
-      const clone = template.content.cloneNode(true);
-      const article = clone.querySelector('article');
+  posts.forEach(post => {
+    const clone = template.content.cloneNode(true);
+    const tile = clone.querySelector('[data-tile]');
 
-      clone.querySelector('[data-title]').textContent = post.title;
-      clone.querySelector('[data-body]').textContent = post.body;
-      const linkEl = clone.querySelector('[data-link]');
+    clone.querySelector('[data-title]').textContent = post.title;
+    clone.querySelector('[data-body]').textContent = post.body;
 
-      linkEl.href = post.link;
-      const linkText = post.linkText ?? 'Open';
-      const linkTarget = post.target ?? '_self';
+    const linkTarget = post.target ?? '_self';
+    tile.href = post.link;
+    tile.target = linkTarget;
+    tile.rel = linkTarget === '_blank' ? 'noreferrer noopener' : '';
+    tile.setAttribute('aria-label', post.linkText ? `${post.title} - ${post.linkText}` : post.title);
 
-      linkEl.textContent = linkText;
-      linkEl.target = linkTarget;
+    applyTheme(tile, post);
 
-      const tagWrap = clone.querySelector('[data-tags]');
-      post.tags.forEach(tag => {
-        const span = document.createElement('span');
-        span.className = 'tag';
-        span.textContent = tag;
-        tagWrap.appendChild(span);
-      });
-
-      if (post.pinned) {
-        article.classList.add('pinned');
-      }
-
-      grid.appendChild(clone);
+    const tagWrap = clone.querySelector('[data-tags]');
+    post.tags.forEach(tag => {
+      const span = document.createElement('span');
+      span.className = 'tag';
+      span.textContent = tag;
+      tagWrap.appendChild(span);
     });
+
+    grid.appendChild(clone);
+  });
 }
 
 render();

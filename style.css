@@ -1,9 +1,9 @@
 :root {
-  --bg: #f5f6f8;
+  --bg: #f6f7fb;
   --panel: #ffffff;
   --text: #0f172a;
   --muted: #4b5563;
-  --line: #e5e7eb;
+  --line: #e4e7ef;
   --accent: #2563eb;
   --radius: 14px;
   color-scheme: light;
@@ -76,24 +76,47 @@ body {
   line-height: 1.5;
 }
 
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   padding: 0.65rem 0.95rem;
   border-radius: 12px;
-  border: 1px solid var(--line);
-  background: #0f172a;
+  border: 1px solid var(--accent);
+  background: var(--accent);
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
   letter-spacing: -0.01em;
-  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease, color 140ms ease, border-color 140ms ease;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.14);
 }
 
 .button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.15);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.18);
+}
+
+.button:focus-visible {
+  outline: 3px solid rgba(37, 99, 235, 0.35);
+  outline-offset: 3px;
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: var(--accent);
+  border-color: var(--accent);
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.12);
+}
+
+.button.secondary:hover {
+  box-shadow: 0 5px 14px rgba(37, 99, 235, 0.14);
 }
 
 .feed {
@@ -108,15 +131,20 @@ body {
   gap: 1rem;
 }
 
+
 .tile {
-  background: var(--panel);
-  border: 1px solid var(--line);
+  background: var(--tile-bg, var(--panel));
+  border: 1px solid var(--tile-border, var(--line));
+  color: var(--tile-text, var(--text));
   border-radius: var(--radius);
   padding: 1.05rem 1.1rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 140ms ease, box-shadow 140ms ease, background-color 140ms ease, color 140ms ease, border-color 140ms ease;
 }
 
 .tile h3 {
@@ -127,7 +155,7 @@ body {
 
 .tile p {
   margin: 0;
-  color: var(--muted);
+  color: var(--tile-subtext, var(--muted));
   line-height: 1.45;
 }
 
@@ -138,19 +166,6 @@ body {
   gap: 0.5rem;
 }
 
-.pin {
-  display: none;
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-}
-
-.tile.pinned .pin {
-  display: inline;
-}
-
 .tags {
   display: flex;
   gap: 0.35rem;
@@ -159,30 +174,22 @@ body {
 }
 
 .tag {
-  background: #f3f4f6;
-  color: var(--muted);
+  background: var(--tag-bg, #f3f4f6);
+  color: var(--tag-text, var(--muted));
   border-radius: 999px;
   padding: 0.2rem 0.6rem;
   font-size: 0.85rem;
-  border: 1px solid var(--line);
+  border: 1px solid var(--tile-border, var(--line));
 }
 
-.tile-link {
-  margin-top: auto;
-  align-self: flex-start;
-  text-decoration: none;
-  color: var(--text);
-  font-weight: 700;
-  padding: 0.5rem 0.7rem;
-  border-radius: 10px;
-  border: 1px solid var(--line);
-  background: #f8fafc;
-  transition: transform 120ms ease, box-shadow 120ms ease;
+.tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
-.tile-link:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+.tile:focus-visible {
+  outline: 3px solid var(--tile-link-text, var(--accent));
+  outline-offset: 3px;
 }
 
 @media (max-width: 640px) {
@@ -202,6 +209,13 @@ body {
 
 .detail-card {
   gap: 0.75rem;
+  cursor: default;
+  transition: none;
+}
+
+.detail-card:hover {
+  transform: none;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
 }
 
 .detail-title {
