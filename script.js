@@ -17,6 +17,15 @@ const brandThemes = {
     tagBackground: '#084f96',
     tagText: '#ffffff'
   },
+  youtube: {
+    background: '#ff0000',
+    text: '#ffffff',
+    border: '#d00000',
+    linkBackground: '#ffffff',
+    linkText: '#ff0000',
+    tagBackground: '#b30000',
+    tagText: '#ffffff'
+  },
   spotify: {
     background: '#1db954',
     text: '#191414',
@@ -34,15 +43,6 @@ const brandThemes = {
     linkText: '#171d25',
     tagBackground: '#2a475e',
     tagText: '#c5c3c0'
-  },
-  youtube: {
-    background: '#ff0000',
-    text: '#ffffff',
-    border: '#d00000',
-    linkBackground: '#ffffff',
-    linkText: '#ff0000',
-    tagBackground: '#b30000',
-    tagText: '#ffffff'
   },
 };
 
@@ -66,6 +66,15 @@ const posts = [
     theme: 'linkedin'
   },
   {
+    title: 'YouTube',
+    body: '',
+    link: 'https://www.youtube.com/@amlew',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'youtube'
+  },
+  {
     title: 'Spotify',
     body: '',
     link: 'https://open.spotify.com/user/h3fzh9y35elo0qy1fp7w99ftf?si=4fe9c342e05c4314',
@@ -82,15 +91,6 @@ const posts = [
     target: '_blank',
     tags: [],
     theme: 'steam'
-  },
-  {
-    title: 'YouTube',
-    body: '',
-    link: 'https://www.youtube.com/@amlew',
-    linkText: 'Open',
-    target: '_blank',
-    tags: [],
-    theme: 'youtube'
   },
   {
     title: 'Teaching Assistant',
