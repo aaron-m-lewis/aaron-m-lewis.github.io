@@ -121,6 +121,16 @@ const posts = [
 const template = document.getElementById('post-template');
 const grid = document.getElementById('post-grid');
 
+function coalesce() {
+  for (let i = 0; i < arguments.length; i++) {
+    const value = arguments[i];
+    if (value !== null && value !== undefined) {
+      return value;
+    }
+  }
+  return undefined;
+}
+
 function applyTheme(article, post) {
   if (!post.theme) return;
 
@@ -129,25 +139,25 @@ function applyTheme(article, post) {
 
   article.style.setProperty('--tile-bg', theme.background);
   article.style.setProperty('--tile-text', theme.text);
-  article.style.setProperty('--tile-subtext', theme.subtext ?? theme.text);
-  article.style.setProperty('--tile-border', theme.border ?? theme.background);
-  article.style.setProperty('--tile-link-bg', theme.linkBackground ?? theme.text);
-  article.style.setProperty('--tile-link-text', theme.linkText ?? theme.background);
-  article.style.setProperty('--tag-bg', theme.tagBackground ?? theme.linkBackground ?? theme.text);
-  article.style.setProperty('--tag-text', theme.tagText ?? theme.linkText ?? theme.background);
+  article.style.setProperty('--tile-subtext', coalesce(theme.subtext, theme.text));
+  article.style.setProperty('--tile-border', coalesce(theme.border, theme.background));
+  article.style.setProperty('--tile-link-bg', coalesce(theme.linkBackground, theme.text));
+  article.style.setProperty('--tile-link-text', coalesce(theme.linkText, theme.background));
+  article.style.setProperty('--tag-bg', coalesce(theme.tagBackground, theme.linkBackground, theme.text));
+  article.style.setProperty('--tag-text', coalesce(theme.tagText, theme.linkText, theme.background));
 }
 
 function render() {
   grid.innerHTML = '';
 
-  posts.forEach(post => {
+  posts.forEach(function (post) {
     const clone = template.content.cloneNode(true);
     const tile = clone.querySelector('[data-tile]');
 
     clone.querySelector('[data-title]').textContent = post.title;
     clone.querySelector('[data-body]').textContent = post.body;
 
-    const linkTarget = post.target ?? '_self';
+    const linkTarget = coalesce(post.target, '_self');
     tile.href = post.link;
     tile.target = linkTarget;
     tile.rel = linkTarget === '_blank' ? 'noreferrer noopener' : '';
@@ -156,7 +166,7 @@ function render() {
     applyTheme(tile, post);
 
     const tagWrap = clone.querySelector('[data-tags]');
-    post.tags.forEach(tag => {
+    post.tags.forEach(function (tag) {
       const span = document.createElement('span');
       span.className = 'tag';
       span.textContent = tag;
