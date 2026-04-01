@@ -44,6 +44,24 @@ const brandThemes = {
     tagBackground: '#2a475e',
     tagText: '#c5c3c0'
   },
+  leetcode: {
+    background: '#ffa116',
+    text: '#1a1a1a',
+    border: '#e59400',
+    linkBackground: '#1a1a1a',
+    linkText: '#ffa116',
+    tagBackground: '#2f2f2f',
+    tagText: '#ffffff'
+  },
+  monkeytype: {
+    background: '#323437',
+    text: '#d1d0c5',
+    border: '#646669',
+    linkBackground: '#e2b714',
+    linkText: '#323437',
+    tagBackground: '#e2b714',
+    tagText: '#323437'
+  },
 };
 
 const posts = [
@@ -93,28 +111,22 @@ const posts = [
     theme: 'steam'
   },
   {
-    title: 'Teaching Assistant',
+    title: 'LeetCode',
     body: '',
-    link: '/teaching_assistant',
-    linkText: 'Read more',
-    target: '_self',
-    tags: []
+    link: 'https://leetcode.com/u/aaron__lewis/',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'leetcode'
   },
   {
-    title: 'Amazon SDE Intern',
+    title: 'Monkeytype',
     body: '',
-    link: '/amazon_sde_intern',
-    linkText: 'Read more',
-    target: '_self',
-    tags: []
-  },
-  {
-    title: 'Freelance Developer',
-    body: '',
-    link: '/freelance_developer',
-    linkText: 'Read more',
-    target: '_self',
-    tags: []
+    link: 'https://monkeytype.com/profile/amlew',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'monkeytype'
   },
 ];
 
