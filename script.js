@@ -55,7 +55,7 @@ const brandThemes = {
   },
   monkeytype: {
     background: '#323437',
-    text: '#d1d0c5',
+    text: '#e2b714',
     border: '#646669',
     linkBackground: '#e2b714',
     linkText: '#323437',
