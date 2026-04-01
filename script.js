@@ -66,6 +66,15 @@ const brandThemes = {
 
 const posts = [
   {
+    title: 'LinkedIn',
+    body: '',
+    link: 'https://www.linkedin.com/in/aaron-matthew-lewis/',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'linkedin'
+  },
+  {
     title: 'GitHub',
     body: '',
     link: 'https://github.com/aaron-m-lewis',
@@ -75,13 +84,22 @@ const posts = [
     theme: 'github'
   },
   {
-    title: 'LinkedIn',
+    title: 'LeetCode',
     body: '',
-    link: 'https://www.linkedin.com/in/aaron-matthew-lewis/',
+    link: 'https://leetcode.com/u/aaron__lewis/',
     linkText: 'Open',
     target: '_blank',
     tags: [],
-    theme: 'linkedin'
+    theme: 'leetcode'
+  },
+  {
+    title: 'Monkeytype',
+    body: '',
+    link: 'https://monkeytype.com/profile/amlew',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'monkeytype'
   },
   {
     title: 'YouTube',
@@ -109,24 +127,6 @@ const posts = [
     target: '_blank',
     tags: [],
     theme: 'steam'
-  },
-  {
-    title: 'LeetCode',
-    body: '',
-    link: 'https://leetcode.com/u/aaron__lewis/',
-    linkText: 'Open',
-    target: '_blank',
-    tags: [],
-    theme: 'leetcode'
-  },
-  {
-    title: 'Monkeytype',
-    body: '',
-    link: 'https://monkeytype.com/profile/amlew',
-    linkText: 'Open',
-    target: '_blank',
-    tags: [],
-    theme: 'monkeytype'
   },
 ];
 
