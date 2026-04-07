@@ -44,6 +44,15 @@ const brandThemes = {
     tagBackground: '#2a475e',
     tagText: '#c5c3c0'
   },
+  bandcamp: {
+    background: '#629aa9',
+    text: '#ffffff',
+    border: '#4c8594',
+    linkBackground: '#ffffff',
+    linkText: '#629aa9',
+    tagBackground: '#4c8594',
+    tagText: '#ffffff'
+  },
   leetcode: {
     background: '#ffa116',
     text: '#1a1a1a',
@@ -102,15 +111,6 @@ const posts = [
     theme: 'monkeytype'
   },
   {
-    title: 'YouTube',
-    body: '',
-    link: 'https://www.youtube.com/@amlew',
-    linkText: 'Open',
-    target: '_blank',
-    tags: [],
-    theme: 'youtube'
-  },
-  {
     title: 'Spotify',
     body: '',
     link: 'https://open.spotify.com/user/h3fzh9y35elo0qy1fp7w99ftf?si=4fe9c342e05c4314',
@@ -118,6 +118,24 @@ const posts = [
     target: '_blank',
     tags: [],
     theme: 'spotify'
+  },
+  {
+    title: 'Bandcamp',
+    body: '',
+    link: 'https://amlew.bandcamp.com/',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'bandcamp'
+  },
+  {
+    title: 'YouTube',
+    body: '',
+    link: 'https://www.youtube.com/@amlew',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'youtube'
   },
   {
     title: 'Steam',
