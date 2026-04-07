@@ -122,7 +122,7 @@ const posts = [
   {
     title: 'Bandcamp',
     body: '',
-    link: 'https://amlew.bandcamp.com/',
+    link: 'https://bandcamp.com/amlew',
     linkText: 'Open',
     target: '_blank',
     tags: [],
