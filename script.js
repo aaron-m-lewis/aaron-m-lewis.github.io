@@ -5,7 +5,7 @@ const brandThemes = {
     border: '#30363d',
     linkBackground: '#ffffff',
     linkText: '#000000',
-    tagBackground: '#161b22',
+    tagBackground: '#30363d',
     tagText: '#ffffff'
   },
   linkedin: {
@@ -14,7 +14,7 @@ const brandThemes = {
     border: '#004182',
     linkBackground: '#ffffff',
     linkText: '#0a66c2',
-    tagBackground: '#084f96',
+    tagBackground: '#004182',
     tagText: '#ffffff'
   },
   youtube: {
@@ -23,17 +23,17 @@ const brandThemes = {
     border: '#d00000',
     linkBackground: '#ffffff',
     linkText: '#ff0000',
-    tagBackground: '#b30000',
+    tagBackground: '#d00000',
     tagText: '#ffffff'
   },
   spotify: {
-    background: '#1db954',
+    background: '#1ed760',
     text: '#191414',
     border: '#169c46',
     linkBackground: '#191414',
-    linkText: '#1db954',
-    tagBackground: '#191414',
-    tagText: '#1db954'
+    linkText: '#1ed760',
+    tagBackground: '#169c46',
+    tagText: '#191414'
   },
   steam: {
     background: '#171d25',
@@ -45,31 +45,31 @@ const brandThemes = {
     tagText: '#c5c3c0'
   },
   bandcamp: {
-    background: '#629aa9',
+    background: '#1da0c3',
     text: '#ffffff',
     border: '#4c8594',
     linkBackground: '#ffffff',
-    linkText: '#629aa9',
+    linkText: '#1da0c3',
     tagBackground: '#4c8594',
     tagText: '#ffffff'
   },
   leetcode: {
-    background: '#ffa116',
-    text: '#1a1a1a',
+    background: '#f8a222',
+    text: '#080808',
     border: '#e59400',
-    linkBackground: '#1a1a1a',
-    linkText: '#ffa116',
-    tagBackground: '#2f2f2f',
-    tagText: '#ffffff'
+    linkBackground: '#080808',
+    linkText: '#f8a222',
+    tagBackground: '#e59400',
+    tagText: '#080808'
   },
   monkeytype: {
-    background: '#323437',
+    background: '#2c2e31',
     text: '#e2b714',
     border: '#646669',
     linkBackground: '#e2b714',
-    linkText: '#323437',
-    tagBackground: '#e2b714',
-    tagText: '#323437'
+    linkText: '#2c2e31',
+    tagBackground: '#646669',
+    tagText: '#e2b714'
   },
 };
 
