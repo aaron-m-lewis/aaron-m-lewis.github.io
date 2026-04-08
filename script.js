@@ -28,12 +28,12 @@ const brandThemes = {
   },
   spotify: {
     background: '#1ed760',
-    text: '#191414',
+    text: '#000000',
     border: '#169c46',
-    linkBackground: '#191414',
+    linkBackground: '#000000',
     linkText: '#1ed760',
     tagBackground: '#169c46',
-    tagText: '#191414'
+    tagText: '#000000'
   },
   steam: {
     background: '#171d25',
@@ -55,12 +55,12 @@ const brandThemes = {
   },
   leetcode: {
     background: '#f8a222',
-    text: '#080808',
+    text: '#000000',
     border: '#e59400',
-    linkBackground: '#080808',
+    linkBackground: '#000000',
     linkText: '#f8a222',
     tagBackground: '#e59400',
-    tagText: '#080808'
+    tagText: '#000000'
   },
   monkeytype: {
     background: '#2c2e31',
