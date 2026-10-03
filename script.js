@@ -71,6 +71,15 @@ const brandThemes = {
     tagBackground: '#646669',
     tagText: '#e2b714'
   },
+  letterboxd: {
+    background: '#14181c',
+    text: '#ffffff',
+    border: '#2c3440',
+    linkBackground: '#00e054',
+    linkText: '#14181c',
+    tagBackground: '#40bcf4',
+    tagText: '#14181c'
+  },
 };
 
 const posts = [
@@ -145,6 +154,15 @@ const posts = [
     target: '_blank',
     tags: [],
     theme: 'steam'
+  },
+  {
+    title: 'Letterboxd',
+    body: '',
+    link: 'https://letterboxd.com/amlew/',
+    linkText: 'Open',
+    target: '_blank',
+    tags: [],
+    theme: 'letterboxd'
   },
 ];
 
